@@ -1,0 +1,5 @@
+com\zensar\spring\instruments\Instrument.class
+com\zensar\spring\performers\Performer.class
+com\zensar\spring\ZensarIdolApp.class
+com\zensar\spring\instruments\Guitar.class
+com\zensar\spring\performers\Instrumentalist.class

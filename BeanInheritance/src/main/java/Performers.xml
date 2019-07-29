@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+	<bean id="guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	
+	<!--  Parent Bean Definition -->
+	
+	<bean id="SHIVAM" class="com.zensar.spring.performers.Instrumentalist">
+		<property name="song" value="JAY HIND...."></property>
+		<property name="instrument" ref="guitar"></property>
+	</bean>
+	
+	<!--  Child Bean Definition -->
+	
+	<bean id="SHUKLA" parent="SHIVAM"></bean>
+
+	<!--  Child bean definition -->	
+	<bean id="SHIV" parent="SHUKLA">
+	<property name="song" value="BHARAT MATA KI JAY...."></property> 
+	</bean>
+	
+	<bean id="Voilen" class="com.zensar.spring.instruments.Voilen"></bean>
+	
+	<bean id="SHIVOM" parent="SHIV">
+	<property name="instrument" ref="Voilen"></property>
+	</bean>
+</beans>
